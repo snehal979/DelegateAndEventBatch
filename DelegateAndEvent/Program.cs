@@ -1,11 +1,13 @@
 ﻿namespace DelegateAndEvent
 {
+    public delegate void Delegatevent();
     class Program
     {
+        public static event Delegatevent add;
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome Delegate and Event program");
-            Console.WriteLine("Enter a Number \n 1.single cast delegate\n 2.MultiplecastDelegate\n 3.ArrayDelegate");
+            Console.WriteLine("Enter a Number \n 1.single cast delegate\n 2.MultiplecastDelegate\n 3.ArrayDelegate\n 4.Event");
             TypeCastDelegate creat = new TypeCastDelegate();//Object
             int num = Convert.ToInt32(Console.ReadLine());
             switch (num)
@@ -32,7 +34,27 @@
                         array[i](70, 6);
                     }
                     break;
+                case 4:
+                    //Event
+                    add += new Delegatevent(INDIA);
+                    add += new Delegatevent(USA);
+                    add += new Delegatevent(ENGLAND);
+                    add.Invoke();
+                    EventProgram.Implementation();
+                    break;
             }
+        }
+        static void INDIA()
+        {
+            Console.WriteLine("INDIA");
+        }
+        static void USA()
+        {
+            Console.WriteLine("USA");
+        }
+        static void ENGLAND()
+        {
+            Console.WriteLine("ENGLAND");
         }
     }
 }
