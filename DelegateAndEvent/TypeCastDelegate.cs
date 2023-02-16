@@ -11,7 +11,7 @@ namespace DelegateAndEvent
     /// <summary>
     /// SingleCastDelegate
     /// </summary>
-    public class SingleCastDelegate
+    public class TypeCastDelegate
     {
         public void Add1(int a, int b)
         {
@@ -21,6 +21,5 @@ namespace DelegateAndEvent
         {
             Console.WriteLine("sub is {0}", a - b);
         }
-
     }
 }
