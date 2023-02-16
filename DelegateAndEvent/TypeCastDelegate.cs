@@ -8,10 +8,7 @@ namespace DelegateAndEvent
 {
     // DELEGATE MODIFER/DELEGATE/RETURN TYPE/NAME OF DELEGATE(PARAMETHER)
     public delegate void Calculation(int a, int b);
-    /// <summary>
-    /// SingleCastDelegate
-    /// </summary>
-    public class SingleCastDelegate
+    public class TypeCastDelegate
     {
         public void Add1(int a, int b)
         {
